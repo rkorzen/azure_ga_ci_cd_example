@@ -32,4 +32,4 @@ jobs:
       with: 
         app-name: 'alx-azure-ga-cicd-example'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_92199ee8b847486e9570910a4273ceaf }}
+        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_92199EE8B847486E9570910A4273CEAF }}
