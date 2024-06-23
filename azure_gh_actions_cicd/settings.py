@@ -25,12 +25,13 @@ SECRET_KEY = "django-insecure-gwyko8*49x6t%plaieg128)c9el)^e+wxl2_^8zq-*!kgq8=v-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["alx-azure-ga-cicd-example.azurewebsites.net", "localhost"]
+ALLOWED_HOSTS = ["alx-azure-ga-cicd-example.azurewebsites.net", "localhost", "127.0.0.1"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    "daphne",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "helloazure.apps.HelloazureConfig",
+    "chat.apps.ChatConfig",
 ]
 
 MIDDLEWARE = [
@@ -70,7 +72,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "azure_gh_actions_cicd.wsgi.application"
-
+ASGI_APPLICATION = "azure_gh_actions_cicd.asgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
